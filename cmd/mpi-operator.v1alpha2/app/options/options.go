@@ -69,5 +69,5 @@ func (s *ServerOption) AddFlags(fs *flag.FlagSet) {
 
 	fs.StringVar(&s.LockNamespace, "lock-namespace", "mpi-operator", "Set locked namespace name while enabling leader election.")
 
-	fs.BoolVar(&s.UseLauncherPodSpecServiceAccount, "use-launcher-pod-spec-serviceaccount", false, "Set Launcher ServiceAccount based on the Launcher pod spec. When enabled, role and rolebinding won't be created")
+	fs.BoolVar(&s.UseLauncherPodSpecServiceAccount, "use-launcher-pod-spec-serviceaccount", true, "Set Launcher ServiceAccount based on the Launcher pod spec. When enabled, role and rolebinding won't be created")
 }
